@@ -1,0 +1,8 @@
+{
+  "name": "serve",
+  "bin": "index.js",
+  "dependencies": {
+    "express": "4.*"
+  }
+}
+
