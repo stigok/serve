@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const express = require('express')
 const app = express()
+const port = process.env.PORT || 8080
 
 const args = process.argv.slice(2)
 app.set('trust proxy')
@@ -13,7 +14,7 @@ app.use((err, req, res, next) => {
   console.error(err || 'Not found')
   res.status(404).send('Not found')
 })
-app.listen(8080, () => {
-  console.log('Listening on port 8080')
+app.listen(port, () => {
+  console.log('Listening on port %d', port)
 })
 
